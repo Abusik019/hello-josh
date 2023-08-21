@@ -1,0 +1,136 @@
+//инпуты,кнопки,формы
+
+
+@import 'core';
+
+.block1_button {
+    @include size(40px, 120px);
+    background-color: black;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all .6s ease;
+
+    &:hover {
+        background-color: $bg_color;
+        color: black;
+        border: 2px black solid;
+    }
+}
+
+.courses-input {
+    display: none;
+    @include font(16px, 400);
+
+    &:checked + .courses-description{
+        color: black;
+    }
+}
+
+.courses-description{
+    color: grey;
+    @include font(16px, bold);
+}
+
+.courses-nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.figma-button {
+    @include button;
+}
+
+.analog-button {
+    @include button;
+}
+
+.insta-button {
+    @include button;
+}
+
+.basics-button {
+    @include button;
+}
+
+.ps-button {
+    @include button;
+}
+
+
+.flex-ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include flex(flex,start,center);
+    flex-direction: column;
+    @include size(100%, 100%);
+    gap: 64px;
+    
+    
+
+    & > li {
+        color: #fff;
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+
+    & > .flex-li_1 {
+        @include size(102px,47px);
+        @include padding(50px,0,0,0);
+    }
+
+    & > .flex-li_2 {
+        @include size(26px,26px);
+    }
+
+    & > .flex-li_3 {
+        @include size(22px,27px);
+    }
+
+    & > .flex-li_4 {
+        @include size(23px,29px);
+    }
+
+    & > .flex-li_5 {
+        @include size(23px,26px);
+    }
+
+    & > .flex-li_6 {
+        @include size(26px,26px);
+    }
+
+    & > .flex-li_7 {
+        @include size(26px,26px);
+        @include padding(70px,0,0,0);
+    }
+}
+
+.first-line_input {
+    @include size(40px,300px);
+    background-color: $bg_color;
+    @include border(8px);
+    @include font(16px,400);
+    @include bg_img(url('../images/search.svg'),no-repeat,auto,5%);
+    outline: none;
+}
+
+.end-line_button {
+    @include size(40px,120px);
+    background-color: rgba(12, 11, 11, 1);
+    @include border(8px);
+    color: $bg_white;
+    @include font(13px,700);
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: $bg_color;
+        color: black;
+        border: 2px solid black;
+    }
+}

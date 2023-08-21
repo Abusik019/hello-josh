@@ -1,0 +1,575 @@
+// сюда записываются блоки, секции, контейнеры
+
+
+@import 'core';
+
+.body{
+    @include margin(0, 0, 0, 0);
+
+    @include flex(flex, center, center);
+    gap: 72px;
+
+    overflow: hidden;
+    
+
+}
+
+
+.main {
+    display: flex;
+    @include margin(56px,0,0,0);
+}
+
+
+
+
+.block {
+    @include size(160px, 620px);
+    border-radius: 14px;
+    background-color: $bg_color;
+
+    position: relative;
+}
+
+
+.block_text_cont {
+    height: max-content;
+}
+
+.block-title {
+    @include font(36px, bold);
+    @include padding(45px, 30px);
+    margin: 0;
+}
+
+.block-text {
+    @include font(16px, 400);
+    @include padding(16px,30px);
+    margin: 0;
+}
+
+
+.block1_square {
+    @include size(64px, 64px);
+    @include bg_img(url('../images/spain.svg'),no-repeat, auto);
+    background-color: #fff;
+    border-radius: 12px; 
+    background-position:calc(50%);
+}
+
+.nested_container {
+    @include flex();
+    @include margin(24px);
+    @include size(80px, 620px);
+}
+
+.block1 {
+    @include flex();
+    @include size(fit-content, 500px);
+    @include padding(8px, 8px, 8px, 24px);
+
+    box-sizing: border-box;
+
+    border-radius: 14px;
+    background-color: $bg_color;
+}
+
+.block1_text {
+    @include font(13px, 400);
+    line-height: 22px;
+    height: max-content;
+    transition: all .5s ease;
+    cursor: pointer;
+    
+    &:active {
+        color: rgb(97, 91, 91);
+    }
+}
+
+span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.block1_circle {
+    @include bg_img(url('../images/circle.svg'), no-repeat,auto);
+    @include size(40px, 40px);
+    @include font(13px, 400); 
+
+    line-height: 40px;
+    text-align: center;
+
+    transition: all .5s ease;
+    cursor: pointer;
+    
+    &:active {
+        color: rgb(97, 91, 91);
+    }
+
+}
+
+.block-img {
+    @include size(191px, 175px);
+    position: absolute;
+    right: 60px;
+    bottom: 0px;
+}
+
+.arrow_control {
+    @include flex();
+    @include size(40px, 96px);
+
+    & > .arrow {
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+
+}
+
+.courses {
+    @include size(555px, 620px);
+    @include margin(60px, 0, 60px, 60px);
+}
+
+.courses-title {
+    @include font(24px, bold);
+
+    transition: all .9s ease;
+    cursor: pointer;
+    
+        &:hover {
+            @include font(48px,bold);
+        } 
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-rows: repeat(5,620px,80px);
+    row-gap: 16px;
+    max-height: calc(100vh - 500px);
+    @include margin(11px);
+    @include scroll(8px, rgba(167, 167, 167, 0.139), 4px, rgba(62, 62, 62, 0.904), 4px, 12px);
+        
+}
+
+
+.courses-block_figma {
+    @include grid;
+
+    & > .figma-container {
+        @include flex();
+        @include padding(8px, 8px, 8px, 24px);
+
+        & > .figma-square {
+             @include size(64px, 64px);
+             @include bg_img(url('../images/figma.svg'),no-repeat,auto);
+            background-color: $bg_white;
+            border-radius: 12px;
+        }
+
+        & > .figma-text {
+            @include font(13px, 400);
+            line-height: 22px;
+            height: max-content;
+            transition: all .5s ease;
+            cursor: pointer;
+    
+                &:active {
+                     color: rgb(97, 91, 91);
+                }
+        }
+
+        & > .figma-time {
+            @include flex();
+            width: 76px;
+            transition: all .5s ease;
+            cursor: pointer;
+    
+                &:active {
+                    color: rgb(97, 91, 91);
+                }   
+
+            & > .figma-img{
+                @include bg_img(url('../images/time.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .figma-time_text {
+                @include font(13px, 400);
+            }
+        }   
+        
+        & > .figma-rating {
+            @include flex();
+            width: 40px;
+            
+
+            & > .figma-rating_img {
+                @include bg_img(url('../images//fire-logo.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .figma-rating_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+                
+        }
+    }
+}
+
+
+
+.courses-block_analog {
+    @include grid;
+
+        & > .analog-container {
+            @include flex();
+            @include padding(8px, 8px, 8px, 24px);
+
+            & > .analog-square {
+                @include size(64px, 64px);
+                @include bg_img(url('../images//analog.svg'),no-repeat,auto);
+                background-color: $bg_white;
+                border-radius: 12px;
+            }
+
+            & > .analog-text {
+                @include font(13px, 400);
+                line-height: 22px;
+                height: max-content;
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+
+
+            }
+
+            & > .analog-time {
+                @include flex();
+                width: 76px;
+
+                & > .analog-img{
+                    @include bg_img(url('../images/time.svg'), no-repeat, auto,left);
+                    @include size(16px, 16px);
+                }
+                & > .analog-time_text {
+                    @include font(13px, 400);
+                    transition: all .5s ease;
+                    cursor: pointer;
+    
+                        &:active {
+                            color: rgb(97, 91, 91);
+                    } 
+                }
+            }   
+
+            & > .analog-rating {
+                @include flex();
+                width: 40px;
+
+                & > .analog-rating_img {
+                    @include bg_img(url('../images//fire-logo.svg'), no-repeat, auto,left);
+                    @include size(16px, 16px);
+                }
+                & > .analog-rating_text {
+                    @include font(13px, 400);
+                    transition: all .5s ease;
+                    cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+                }
+                
+            }
+        }
+}
+
+
+.courses-block_insta {
+    @include grid;
+
+    & > .insta-container {
+        @include flex();
+        @include padding(8px, 8px, 8px, 24px);
+
+        & > .insta-square {
+            @include size(64px, 64px);
+            @include bg_img(url('../images/insta.svg'),no-repeat,auto);
+            background-color: $bg_white;
+            border-radius: 12px;
+        }
+
+        & > .insta-text {
+            @include font(13px, 400);
+            line-height: 22px;
+            height: max-content;
+            transition: all .5s ease;
+            cursor: pointer;
+    
+                &:active {
+                    color: rgb(97, 91, 91);
+                } 
+        }
+
+        & > .insta-time {
+            @include flex();
+            width: 76px;
+
+            & > .insta-img{
+                @include bg_img(url('../images/time.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .insta-time_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+        }   
+
+        & > .insta-rating {
+            @include flex();
+            width: 40px;
+
+            & > .insta-rating_img {
+                @include bg_img(url('../images//fire-logo.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .insta-rating_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+            
+        }
+    }
+}
+
+.courses-block_basics{
+    @include grid;
+    & > .basics-container {
+        @include flex();
+        @include padding(8px, 8px, 8px, 24px);
+
+        & > .basics-square {
+            @include size(64px, 64px);
+            @include bg_img(url('../images/pen.svg'),no-repeat,auto);
+            background-color: $bg_white;
+            border-radius: 12px;
+        }
+
+        & > .basics-text {
+            @include font(13px, 400);
+            line-height: 22px;
+            height: max-content;
+            transition: all .5s ease;
+            cursor: pointer;
+    
+                &:active {
+                    color: rgb(97, 91, 91);
+                } 
+        }
+
+        & > .basics-time {
+            @include flex();
+            width: 76px;
+
+            & > .basics-img{
+                @include bg_img(url('../images/time.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .basics-time_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+        }   
+
+        & > .basics-rating {
+            @include flex();
+            width: 40px;
+
+            & > .basics-rating_img {
+                @include bg_img(url('../images//fire-logo.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .basics-rating_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+            
+        }
+    }
+
+}
+
+.courses-block_ps {
+    @include grid;
+    & > .ps-container {
+        @include flex();
+        @include padding(8px, 8px, 8px, 24px);
+
+        & > .ps-square {
+            @include size(64px, 64px);
+            @include bg_img(url('../images/ps.svg'),no-repeat,auto);
+            background-color: $bg_white;
+            border-radius: 12px;
+        }
+
+        & > .ps-text {
+            @include font(13px, 400);
+            line-height: 22px;
+            height: max-content;
+            transition: all .5s ease;
+            cursor: pointer;
+    
+                &:active {
+                    color: rgb(97, 91, 91);
+                } 
+        }
+
+        & > .ps-time {
+            @include flex();
+            width: 76px;
+
+            & > .ps-img{
+                @include bg_img(url('../images/time.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .ps-time_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+        }   
+
+        & > .ps-rating {
+            @include flex();
+            width: 40px;
+
+            & > .ps-rating_img {
+                @include bg_img(url('../images//fire-logo.svg'), no-repeat, auto,left);
+                @include size(16px, 16px);
+            }
+            & > .ps-rating_text {
+                @include font(13px, 400);
+                transition: all .5s ease;
+                cursor: pointer;
+    
+                    &:active {
+                        color: rgb(97, 91, 91);
+                    } 
+            }
+            
+        }
+    }
+}
+
+.header{
+    @include size(100vh, 156px);
+    @include padding(24px, 32px, 24px, 0px);
+
+    box-sizing: border-box;
+}
+
+.flexbox {
+    @include size(100%, 100%);
+    background-color: rgba(12, 11, 11, 1);
+    @include border(24px);
+}
+
+.container-right_side {
+    width: 450px;
+}
+
+.first-line_right_side {
+    @include flex;
+    
+}
+
+.first-line_man {
+    @include bg_img(url('../images/men.svg'),no-repeat,auto);
+    @include size(40px,56px);
+}
+
+.second-line_right-side {
+    @include flex;
+    @include margin(23px,0,0,0);
+}
+
+.second-line_block1, .second-line_block2 {
+    @include size(97px,208px);
+    @include flex(flex,center);
+    background-color: $bg_color;
+    @include border(14px);
+}
+
+.second-line_block_title {
+    @include font(64px,bold);
+}
+
+.second-line_block_text {
+    @include padding(0,10px,0,0);
+    @include font(16px,600);
+    line-height: 24px;
+}
+
+.right-side_diagram {
+    @include size(379px,450px);
+    background-color: $bg_color;
+    @include margin(40px,0,0,0);
+}
+
+.end-line_right_side {
+    @include size(193px,440px);
+    background-color: $bg_color;
+    @include border(14px);
+    @include flex(flex,space-around,center);
+    @include margin(49px,0,0,0);
+}
+
+.end-line_title {
+    @include font(24px,600);
+}
+
+.end-line_text {
+    @include font(16px,400);
+}
+
+.end-line_book {
+    @include bg_img(url('../images/book.svg'),no-repeat,auto,end);
+    @include size(125px,125px);
+}

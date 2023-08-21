@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SCSS tamplate</title>
+
+
+        <link rel="stylesheet" href="./css/app.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <div class="flexbox">
+                <ul class="flex-ul">
+                    <li class="flex-li_1"><a href="https://www.youtube.com/"><img src="./images/flex-F.svg" alt=""></a></li>
+                    <li class="flex-li_2"><a href="https://www.youtube.com/"><img src="./images/flex-home.svg" alt=""></a></li>
+                    <li class="flex-li_3"><a href="https://www.youtube.com/"><img src="./images/flex-hat.svg" alt=""></a></li>
+                    <li class="flex-li_4"><a href="https://www.youtube.com/"><img src="./images/flex-human.svg" alt=""></a></li>
+                    <li class="flex-li_5"><a href="https://www.youtube.com/"><img src="./images/flex-mail.svg" alt=""></a></li>
+                    <li class="flex-li_6"><a href="https://www.youtube.com/"><img src="./images/flex-set.svg" alt=""></a></li>
+                    <li class="flex-li_7"><a href="https://www.youtube.com/"><img src="./images/flex-exit.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="central-part">
+                <div class="container">
+                    <div class="block">
+                        <div class="block_text_cont">
+                            <p class="block-title">Hello Josh!</p>
+                            <h2 class="block-text">It’s good to see you again.</h2>
+                        </div>
+                        <img class="block-img" src="./images/boy.svg" alt="boy">
+                    </div>
+                    <div class="nested_container">
+                        <div class="block1">
+                            <div class="block1_square"></div>
+                            <div class="block1_text"><span>Spanish B2</span><br>by Alejandro Velazquez</div>
+                            <div class="block1_circle">83%</div>
+                            <button class="block1_button">Continue</button>
+                        </div>
+                        <div class="arrow_control">
+                            <div class="arrow">
+                                <img src="./images/arrow1.svg" alt="стрела">
+                            </div>
+                            <div class="arrow">
+                                <img src="./images/arrow2.svg" alt="стрела">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="courses">
+                    <p class="courses-title">Courses</p>
+                    <form class="courses-nav">
+                        <input class="courses-input" type="radio" id="All_Courses" name="radio" checked>
+                        <label class="courses-description" for="All_Courses">All Courses</label>
+
+                        <input class="courses-input" type="radio" id="The_Newest" name="radio">
+                        <label class="courses-description" for="The_Newest">The Newest</label>
+
+                        <input class="courses-input" type="radio" id="Top_Rated" name="radio">
+                        <label class="courses-description" for="Top_Rated">Top Rated</label>
+
+                        <input class="courses-input" type="radio" id="Most_Popular" name="radio">
+                        <label class="courses-description" for="Most_Popular">Most Popular</label>
+                    </form>
+                    <div class="courses-grid">
+                        <div class="courses-block_figma">
+                            <div class="figma-container">
+                                <div class="figma-square"></div>
+                                <div class="figma-text"><span>Learn Figma</span><br>by Christopher Morgan</div>
+                                <div class="figma-time">
+                                    <div class="figma-img"></div>
+                                    <h1 class="figma-time_text">6h 30min</h1>
+                                </div>
+                                <div class="figma-rating">
+                                    <div class="figma-rating_img"></div>
+                                    <h2 class="figma-rating_text">4,9</h2>
+                                </div>
+                                <button class="figma-button">View course</button>
+                            </div>
+                        </div>
+                        
+                        <div class="courses-block_analog">
+                            <div class="analog-container">
+                                <div class="analog-square"></div>
+                                <div class="analog-text"><span>Analog photography</span><br>by Gordon Norman</div>
+                                <div class="analog-time">
+                                    <div class="analog-img"></div>
+                                    <h1 class="analog-time_text">3h 15min</h1>
+                                </div>
+                                <div class="analog-rating">
+                                    <div class="analog-rating_img"></div>
+                                    <h2 class="analog-rating_text">4,7</h2>
+                                </div>
+                                <button class="analog-button">View course</button>
+                            </div>
+                        </div>
+
+                        <div class="courses-block_insta">
+                            <div class="courses-block_insta">
+                                <div class="insta-container">
+                                    <div class="insta-square"></div>
+                                    <div class="insta-text"><span>Master Instagram</span><br>by Sophie Gill</div>
+                                    <div class="insta-time">
+                                        <div class="insta-img"></div>
+                                        <h1 class="insta-time_text">7h 40min</h1>
+                                    </div>
+                                    <div class="insta-rating">
+                                        <div class="insta-rating_img"></div>
+                                        <h2 class="insta-rating_text">4,6</h2>
+                                    </div>
+                                    <button class="insta-button">View course</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="courses-block_basics">
+                            <div class="courses-block_basics">
+                                <div class="basics-container">
+                                    <div class="basics-square"></div>
+                                    <div class="basics-text"><span>Basics of drawing</span><br>by Jean Tate</div>
+                                    <div class="basics-time">
+                                        <div class="basics-img"></div>
+                                        <h1 class="basics-time_text">11h 30min</h1>
+                                    </div>
+                                    <div class="basics-rating">
+                                        <div class="basics-rating_img"></div>
+                                        <h2 class="basics-rating_text">4,8</h2>
+                                    </div>
+                                    <button class="basics-button">View course</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-block_ps">
+                            <div class="courses-block_ps">
+                                <div class="ps-container">
+                                    <div class="ps-square"></div>
+                                    <div class="ps-text"><span>Photoshop - Essence</span><br>by David Green</div>
+                                    <div class="ps-time">
+                                        <div class="ps-img"></div>
+                                        <h1 class="ps-time_text">5h 35min</h1>
+                                    </div>
+                                    <div class="ps-rating">
+                                        <div class="ps-rating_img"></div>
+                                        <h2 class="ps-rating_text">4,7</h2>
+                                    </div>
+                                    <button class="ps-button">View course</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-block_ps">
+                            <div class="courses-block_ps">
+                                <div class="ps-container">
+                                    <div class="ps-square"></div>
+                                    <div class="ps-text"><span>Photoshop - Essence</span><br>by David Green</div>
+                                    <div class="ps-time">
+                                        <div class="ps-img"></div>
+                                        <h1 class="ps-time_text">5h 35min</h1>
+                                    </div>
+                                    <div class="ps-rating">
+                                        <div class="ps-rating_img"></div>
+                                        <h2 class="ps-rating_text">4,7</h2>
+                                    </div>
+                                    <button class="ps-button">View course</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-block_ps">
+                            <div class="courses-block_ps">
+                                <div class="ps-container">
+                                    <div class="ps-square"></div>
+                                    <div class="ps-text"><span>Photoshop - Essence</span><br>by David Green</div>
+                                    <div class="ps-time">
+                                        <div class="ps-img"></div>
+                                        <h1 class="ps-time_text">5h 35min</h1>
+                                    </div>
+                                    <div class="ps-rating">
+                                        <div class="ps-rating_img"></div>
+                                        <h2 class="ps-rating_text">4,7</h2>
+                                    </div>
+                                    <button class="ps-button">View course</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- сделать кастомый скрол(в стиле сайта) -->
+                </section>
+            </div>
+            <div class="container-right_side">
+                <div class="first-line_right_side">
+                    <input class="first-line_input" type="text">
+                    <div class="first-line_bell"><a href="https://www.youtube.com"><img src="./images/notification.svg" alt=""></a></div>
+                    <div class="first-line_man"></div>
+                </div>
+                <div class="second-line_right-side">
+                    <div class="second-line_block1">
+                        <p class="second-line_block_title">11</p>
+                        <h1 class="second-line_block_text">Courses<br>completed</h1>
+                    </div>
+                    <div class="second-line_block2">
+                        <p class="second-line_block_title">4</p>
+                        <h1 class="second-line_block_text">Courses<br>in progress</h1>
+                    </div>
+                </div>
+                <div class="right-side_diagram">
+
+                </div>
+                <div class="end-line_right_side">
+                    <div class="end-line_paragraph">
+                        <p class="end-line_title">Learn even more!</p>
+                        <h1 class="end-line_text">Unlock premium features<br>only for $9.99 per month.</h1>
+                        <button class="end-line_button">Go Premium</button>
+                    </div>
+                    <div class="end-line_book"></div>
+                </div>
+            </div>
+        </main>
+        
+    </body>
+</html>
+                
